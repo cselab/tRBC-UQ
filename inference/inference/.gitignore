@@ -1,0 +1,5 @@
+results*
+sbatch*.sh
+slurm*.out
+log*.log
+samples

@@ -1,0 +1,10 @@
+/*.log
+ply_S0
+ply_eq
+ply_relax
+ply_f_*
+stats.csv
+S0.off
+eq.off
+stretched.off
+_korali_result

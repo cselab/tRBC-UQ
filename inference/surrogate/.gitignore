@@ -1,0 +1,5 @@
+log*.log
+_korali_result_*
+slurm*.out
+sbatch*.sh
+line_eval*csv
