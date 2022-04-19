@@ -1,0 +1,21 @@
+clean(all)$
+
+wD(r) := (1 - r/rc)**s$
+assume(rc>0, s>0)$
+
+I2: integrate(r**2 * wD(r), r, 0, rc)$
+I4: integrate(r**4 * wD(r), r, 0, rc)$
+
+eta_D: 2 * %pi * gamma * rho**2 / 15 * I4$
+nu_D: eta_D / rho;
+
+tau_inv: 4 * %pi * gamma * rho / 3 * I2$
+D: kBT / tau_inv$
+
+nu_K: D/2;
+
+nu: nu_K + nu_D;
+
+apply(tex, [nu]);
+
+nu, s: 2;

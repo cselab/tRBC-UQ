@@ -1,0 +1,15 @@
+clean(all)$
+
+wD(r) := (1 - r/rc)**s$
+assume(rc>0, s>0)$
+
+I: integrate(r**2 * wD(r), r, 0, rc);
+
+tau_inv: 4 * %pi * gamma * rho / 3 * I$
+
+D: kBT / tau_inv;
+
+apply(tex, [D]);
+
+/* special case from Groot and Warren 1997, to double check */
+D, s:2;

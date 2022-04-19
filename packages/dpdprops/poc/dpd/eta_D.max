@@ -1,0 +1,13 @@
+clean(all)$
+
+wD(r) := (1 - r/rc)**s$
+assume(rc>0, s>0)$
+
+I: integrate(r**4 * wD(r), r, 0, rc);
+
+eta_D: 2 * %pi * gamma * rho**2 / 15 * I;
+
+apply(tex, [eta_D]);
+
+/* special case from Groot and Warren 1997, to double check */
+eta_D, s:2;

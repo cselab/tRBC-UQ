@@ -1,0 +1,7 @@
+clear(all)$
+
+U: ks * lm * (3 * (l/lm)**2 - 2 * (l/lm)**3) / (4 * (1-(l/lm))) + kp / ((m-1)*l**(m-1));
+
+F: diff(U, l);
+
+solve(F, kp);

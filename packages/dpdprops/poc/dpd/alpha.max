@@ -1,0 +1,6 @@
+clean(all) $
+
+w(r) := 1 - r/rc$
+assume(rc>0)$
+
+alpha: 2 * %pi / 3 * integrate(r**3 * w(r), r, 0, rc);
